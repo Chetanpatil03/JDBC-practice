@@ -1,1 +1,1 @@
-com.mysql.cj.jdbc.Driver
+("+com.mysql.cj.jdbc.Driver+")
