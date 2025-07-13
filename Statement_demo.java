@@ -1,17 +1,20 @@
 import java.sql.Statement;
 import java.sql.Connection;
-import java.sql.Driver;
+// import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class Statement_demo {
     public static void main(String[] args) {
+
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String user = "root";
         String pass = "root";
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
+
             System.out.println("Driver loaded successfully......");
         }
         catch(ClassNotFoundException ex){
@@ -42,7 +45,7 @@ public class Statement_demo {
             Statement statement = conn.createStatement();
 
             int count = statement.executeUpdate(sql);
-            
+
             if (count > 0) {
                 System.out.println("DATA INSERTED");
             }
